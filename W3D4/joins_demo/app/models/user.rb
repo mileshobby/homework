@@ -22,12 +22,23 @@ class User < ActiveRecord::Base
   has_many :post_feedback, :through => :posts, :source => :comments
 
   def n_plus_one_post_comment_counts
-    posts = self.posts
-    # SELECT *
-    #   FROM posts
-    #  WHERE posts.author_id = ?
-    #
-    # where `?` gets replaced with `user.id`
+    posts = self.posts.includes(:comments)
+
+    # Makes two queries:
+   # SELECT *
+   #   FROM posts
+   #  WHERE post.author_id = ?
+   #
+   # where `?` is replaced with `user.id`.
+   #
+   # ...and...
+   #
+   # SELECT *
+   #   FROM comments
+   #  WHERE comments.post_id IN ?
+   #
+   # where `?` is replaced with `self.posts.map(&:id)`, the `Array`
+   # of `Post` ids.
 
     post_comment_counts = {}
     posts.each do |post|
@@ -35,11 +46,8 @@ class User < ActiveRecord::Base
       # has overhead, so this is very wasteful if there are a lot of
       # `Post`s for the `User`.
       post_comment_counts[post] = post.comments.length
-      # SELECT *
-      #   FROM comments
-      #  WHERE comments.post_id = ?
-      #
-      # where `?` gets replaced with `post.id`
+      # doesn't fire a query, since already prefetched the association
+     # way better than N+1
     end
 
     post_comment_counts
