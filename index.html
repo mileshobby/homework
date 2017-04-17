@@ -65,6 +65,48 @@
         </ol>
       </section>
 
+    <!-- FORM FOR REVIEw -->
+    <section>
+      <form action='/reviews' method='post'>
+        <label for="username"> Full Name: </label>
+        <input type="text" id="username"><br>
+
+        <label for="rating">Rating: </label>
+        <input type="radio" name="rating" value="1" checked>
+        &#x2606
+        <input type="radio" name="rating" value="2">
+        &#x2606&#x2606
+        <input type="radio" name="rating" value="3">
+        &#x2606&#x2606&#x2606
+        <input type="radio" name="rating" value="4">
+        &#x2606&#x2606&#x2606&#x2606
+        <input type="radio" name="rating" value="5">
+        &#x2606&#x2606&#x2606&#x2606&#x2606
+
+        <label for="cooking_expertise">Cooking Expertise</label>
+        <select name="cooking_expertise">
+          <option value="instructions" disable=true selected="true">
+            Select Cooking Expertise</option>
+          <option value="Sometimes Cook">Sometimes Cook</option>
+          <option value="Cook Everyday">Cook Everyday</option>
+          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+          <option value="Professional Chef">Professional Chef</option>
+        </select>
+
+        <br>
+        <label>
+          Review:<br>
+          <textarea name="review"
+          rows="10" cols="50" placeholder="Write your review here!"></textarea>
+        </label>
+        <br>
+
+        <input type="submit" value="Submit">
+
+      </form>
+    </section>
+
+
     <footer>
       <p> Original recipe can be found at:
           http://www.food.com/recipe/chicken-tikka-masala-25587
