@@ -13,4 +13,10 @@ class User < ActiveRecord::Base
   def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
+
+  def find_by_credentials(username, password)
+    user = User.find_by_username(username)
+    return nil if user.nil?
+    user.is_password?(password) ? user : nil
+  end
 end
