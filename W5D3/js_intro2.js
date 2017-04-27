@@ -31,8 +31,9 @@ function Elephant(name, height, tricks){
     console.log(`${this.name} is ${this.tricks[Math.floor(Math.random() * this.tricks.length)]}`);
   };
 
-  Elephant.paradeHelper = function (elephant) {
-    console.log(`${elephant.name} is trotting by.`);
+  Elephant.parade = function (herd) {
+    herd.forEach( elephant => {console.log(`${elephant.name} is trotting by.`);}
+    );
   };
 
   let ellie = new Elephant("Ellie", 185, ["giving human friends a ride", "playing hide and seek"]);
@@ -42,9 +43,11 @@ function Elephant(name, height, tricks){
 
   let herd = [ellie, charlie, kate, micah];
 
-  ellie.trumpet;
+  Elephant.parade(herd);
+
+  ellie.trumpet();
   console.log(ellie.height);
-  ellie.grow;
+  ellie.grow();
   console.log(ellie.height);
   console.log(ellie.tricks);
-  ellie.play;
+  ellie.play();
