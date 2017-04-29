@@ -1,52 +1,14 @@
 body{
   font-family: arial, sans-serif;
+  background-color: antiquewhite;
 }
 
 h1 {
     font-size: 38px;
 }
 
-body {
-    font-family: arial, sans-serif;
-}
-
-h2 {
-    font-size:  32px;
-}
-
 .ingredients-list{
   list-style: square-inside;
-}
-
-body {
-    background-color: antiquewhite;
-}
-
-header > img {
-  width: 100px;
-}
-body{
-  font-family: arial, sans-serif;
-}
-
-h1 {
-    font-size: 38px;
-}
-
-body {
-    font-family: arial, sans-serif;
-}
-
-h2 {
-    font-size:  32px;
-}
-
-.ingredients-list{
-  list-style: square-inside;
-}
-
-body {
-    background-color: #f3e8d9;
 }
 
 header > img {
@@ -60,4 +22,58 @@ ul li a{
 
 ol {
   list-style: upper-roman inside;
+}
+
+nav ul li{
+  display:inline-block;
+}
+
+nav ul li a{
+  padding: 20px;
+  display: block;
+}
+
+nav{
+  display: inline-block;
+}
+
+body{
+  width: 900px;
+  margin: 0 auto;
+}
+
+section{
+  width: 700px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+aside{
+  width: 180px;
+  display: inline-block;
+  margin-right: : 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.ingredients-list li{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.directions-list li{
+  margin: 15px 0;
+}
+
+input {
+  display: inline-block;
+}
+
+select{
+  width: 180px;
+  margin: 10px 0
+}
+
+textarea{
+  width: 350px;
 }
