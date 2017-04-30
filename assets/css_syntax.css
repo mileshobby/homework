@@ -34,7 +34,7 @@ nav ul li a{
 }
 
 nav{
-  display: inline-block;
+  float: right;
 }
 
 body{
@@ -76,4 +76,12 @@ select{
 
 textarea{
   width: 350px;
+}
+
+.logo{
+  float:left;
+}
+
+.col-2-3{
+  width: 66.666%;
 }
