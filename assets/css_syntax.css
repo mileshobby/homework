@@ -32,7 +32,9 @@ nav ul li a{
   padding: 20px;
   display: block;
 }
+@media all and (max-width: 900px) {
 
+}
 nav{
   float: right;
 }
@@ -76,12 +78,4 @@ select{
 
 textarea{
   width: 350px;
-}
-
-.logo{
-  float:left;
-}
-
-.col-2-3{
-  width: 66.666%;
 }

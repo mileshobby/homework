@@ -9,13 +9,13 @@
     <title>Miles Hobby's Recipe</title>
 
     <!-- external javascript link -->
-    <script type="text/javascript" src="assets/external_javascript_example.js">
-    </script>
 
     <link rel="stylesheet" href="assets/css_custom_reset.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css_syntax.css" type="text/css"/>
     <link rel="stylesheet" href="assets/custom_grid.css" type="text/css"/>
 
+    <script type="text/javascript" src="assets/external_javascript_example.js">
+    </script>
     <!-- google analytics script -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -34,103 +34,107 @@
       <img class='cf' src="https://goo.gl/BME5T4" alt="App Academy Logo" />
       <nav>
         <ul>
-          <li><a href='#Description'/>Description</li>
-          <li><a href='#Ingredients'/>Ingredients</li>
-          <li><a href='#Directions'/>Directions</li>
+          <li><a href='#Description'>Description</a></li>
+          <li><a href='#Ingredients'>Ingredients</a></li>
+          <li><a href='#Directions'>Directions</a></li>
         </ul>
       </nav>
     </header>
 
-    <aside class="col col-1-3">
-      <h2><a name="Ingredients"/>Ingredients</h2>
+    <div class="col col-1-3">
+      <aside>
+        <h2><a name="Ingredients"/>Ingredients</h2>
 
-        <ul class="ingredients-list">
-          <li>1 1/2 pounds boneless, skinless chicken breasts
-            (3 to 4 breast halves total) </li>
-          <li> 1/4 cup plain whole-milk Greek-style yogurt </li>
-          <li> 2 tablespoons peanut oil </li>
-          <li> 2 teaspoons fresh lime or lemon juice </li>
-          <li> 1 large clove garlic, minced </li>
-        </ul>
-    </aside>
+          <ul class="ingredients-list">
+            <li>1 1/2 pounds boneless, skinless chicken breasts
+              (3 to 4 breast halves total) </li>
+            <li> 1/4 cup plain whole-milk Greek-style yogurt </li>
+            <li> 2 tablespoons peanut oil </li>
+            <li> 2 teaspoons fresh lime or lemon juice </li>
+            <li> 1 large clove garlic, minced </li>
+          </ul>
+      </aside>
+    </div>
 
-    <section id='main'>
-    <h1>Chicken Tikka Massala</h1>
+    <div class="col col-2-3"
 
-    <figure>
-      <img src="https://goo.gl/6fRgwM" alt="Chicken Tikka Masala" />
-      <figcaption><a href="https://en.wikipedia.org/wiki/Chicken_tikka_masala">
-        Background on Chicken Tikka Masala</a>
-      </figcation>
-    </figure>
+      <section id='main'>
+      <h1>Chicken Tikka Massala</h1>
 
-
-      <h2><a name='Description'/>Description</h2>
-
-      <p>
-        If there's one dish guaranteed to be on every Indian restaurant
-        menu, it's Chicken Tikka Masala, which is composed of grilled
-        chunks of chicken enveloped in a creamy spiced tomato sauce.
-      </p>
+      <figure>
+        <img src="https://goo.gl/6fRgwM" alt="Chicken Tikka Masala" />
+        <figcaption><a href="https://en.wikipedia.org/wiki/Chicken_tikka_masala">
+          Background on Chicken Tikka Masala</a>
+        </figcation>
+      </figure>
 
 
-      <h2><a name='Directions'/>Directions</h2>
+        <h2><a name='Description'/>Description</h2>
 
-        <ol class="directions-list">
-          <li>Soak bamboo skewers in water.</li>
-          <li>Thread chicken on skewers, and marinate (in the refrigerator)
-             for an hour or so.</li>
-          <li>Discard marinade. </li>
-          <li>For sauce, melt butter on medium heat. </li>
-          <li>Add garlic and jalapeno; cook 1 minute. </li>
-          <li>Stir in coriander, cumin, paprika, garam masala and salt. </li>
-          <li>Stir in tomato sauce. </li>
-          <li>Simmer 15 minutes. </li>
-        </ol>
+        <p>
+          If there's one dish guaranteed to be on every Indian restaurant
+          menu, it's Chicken Tikka Masala, which is composed of grilled
+          chunks of chicken enveloped in a creamy spiced tomato sauce.
+        </p>
+
+
+        <h2><a name='Directions'/>Directions</h2>
+
+          <ol class="directions-list">
+            <li>Soak bamboo skewers in water.</li>
+            <li>Thread chicken on skewers, and marinate (in the refrigerator)
+               for an hour or so.</li>
+            <li>Discard marinade. </li>
+            <li>For sauce, melt butter on medium heat. </li>
+            <li>Add garlic and jalapeno; cook 1 minute. </li>
+            <li>Stir in coriander, cumin, paprika, garam masala and salt. </li>
+            <li>Stir in tomato sauce. </li>
+            <li>Simmer 15 minutes. </li>
+          </ol>
+        </section>
+
+        <br><br>
+      <h1>Reviews</h1>
+      <!-- FORM FOR REVIEw -->
+      <section id='reviews'>
+        <form action='/reviews' method='post' id='review-form'>
+          <input id="name" type="text" name="username" placeholder="Full Name"><br>
+
+          <input type="radio" name="rating" value="1" checked>
+          1
+          <input type="radio" name="rating" value="2">
+          2
+          <input type="radio" name="rating" value="3">
+          3
+          <input type="radio" name="rating" value="4">
+          4
+          <input type="radio" name="rating" value="5">
+          5
+
+          <br>
+
+          <select id="expertise" name="cooking_expertise">
+            <option value="instructions" disabled selected="true">
+              --Select Cooking Expertise--</option>
+            <option value="Sometimes Cook">Sometimes Cook</option>
+            <option value="Cook Everyday">Cook Everyday</option>
+            <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+            <option value="Professional Chef">Professional Chef</option>
+          </select>
+
+          <br>
+          <label>
+            Review:<br>
+            <textarea id="review" name="review"
+            rows="10" cols="50" placeholder="Write your review here!"></textarea>
+          </label>
+          <br>
+
+          <input type="submit" value="Submit Review">
+
+        </form>
       </section>
-
-      <br><br>
-    <h1>Reviews</h1>
-    <!-- FORM FOR REVIEw -->
-    <section id='reviews'>
-      <form action='/reviews' method='post' id='review-form'>
-        <input type="text" name="username" placeholder="Full Name"><br>
-
-        <input type="radio" name="rating" value="1" checked>
-        1
-        <input type="radio" name="rating" value="2">
-        2
-        <input type="radio" name="rating" value="3">
-        3
-        <input type="radio" name="rating" value="4">
-        4
-        <input type="radio" name="rating" value="5">
-        5
-
-        <br>
-
-        <select name="cooking_expertise">
-          <option value="instructions" disabled selected="true">
-            --Select Cooking Expertise--</option>
-          <option value="Sometimes Cook">Sometimes Cook</option>
-          <option value="Cook Everyday">Cook Everyday</option>
-          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
-          <option value="Professional Chef">Professional Chef</option>
-        </select>
-
-        <br>
-        <label>
-          Review:<br>
-          <textarea name="review"
-          rows="10" cols="50" placeholder="Write your review here!"></textarea>
-        </label>
-        <br>
-
-        <input type="submit" value="Submit">
-
-      </form>
-    </section>
-
+    </div>
 
     <footer>
       <p> Original recipe can be found at:
