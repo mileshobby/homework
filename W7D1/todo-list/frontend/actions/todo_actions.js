@@ -1,12 +1,15 @@
-export const RECIEVE_TODOS = "RECIEVE_TODOS";
-export const RECIEVE_TODO = "RECIEVE_TODO";
+export const RECEIVE_TODOS = "RECEIVE_TODOS";
+export const RECEIVE_TODO = "RECEIVE_TODO";
 
-export const recieveTodos = (todos)=> ({
-  action: RECIEVE_TODOS,
+export const receiveTodos = (todos)=> ({
+  type: RECEIVE_TODOS,
   todos: todos
 });
 
-export const recieveTodo = (todo)=>({
-  type: RECIEVE_TODO,
+export const receiveTodo = (todo)=>({
+  type: RECEIVE_TODO,
   todo: todo
 });
+
+window.receiveTodo = receiveTodo;
+window.receiveTodos = receiveTodos;
